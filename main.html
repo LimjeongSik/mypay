@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/common.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <title>My Pay</title>
+    </head>
+    <body>
+        <div class="wrap">
+            <header class="main_header">
+                <div class="main_menu">
+                    <div class="logo">
+                        <img src="images/icons/icon_logo.png" alt="MYPAY" />
+                    </div>
+                    <div class="btn_menu">
+                        <img src="images/btns/btn_menu.png" alt="메뉴" />
+                    </div>
+                </div>
+            </header>
+            <main class="main_wrap">
+                <div class="card">
+                    <div class="card_wrap">
+                        <div class="card-top">
+                            <span class="change_txt">보유금액</span>
+                            <div class="btn_refresh">
+                                <img
+                                    src="images/btns/btn_refresh.png"
+                                    alt="새로고침"
+                                />
+                            </div>
+                        </div>
+                        <div class="none_card">
+                            <span class="card_txt"
+                                >등록된 계좌가 없습니다.</span
+                            >
+                            <div class="money">
+                                <span class="value">0</span>
+                                <span class="txt">원</span>
+                            </div>
+                        </div>
+                        <div class="card_registration">
+                            <span class="card_txt">8340-2680-0031-4478</span>
+                            <div class="money">
+                                <span class="value">25,000</span>
+                                <span class="txt">원</span>
+                            </div>
+                        </div>
+                        <div class="card_number">
+                            <div class="cardnumber_input-box">
+                                <label>유효기간(YYYY/MM)</label>
+                                <input type="text" placeholder="유효기간" />
+                            </div>
+                            <div class="cardnumber_input-box">
+                                <label>유효기간(CVC)</label>
+                                <input type="text" placeholder="CVC" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_select_card">카드선택</div>
+                    <div class="btn_charge_card">충전하기</div>
+                </div>
+                <div class="main_content">
+                    <div class="none_card-content">
+                        <div class="none_card_txt">
+                            <span class="emoji">👋</span>
+                            <span class="hello_user">
+                                반가워요 고객님!<br />
+                                사용하실 <span>카드를 선택</span>해주세요.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card_registration_content">
+                        <div class="mypay">
+                            <span>슬기로운 마이페이</span>
+                            <div class="mypay_option">
+                                <div class="btn btn_gift">
+                                    <img
+                                        src="images/icons/icon_gift.png"
+                                        alt="페이선물"
+                                    />
+                                    <span>페이선물</span>
+                                </div>
+                                <div class="btn btn_giftbox">
+                                    <img
+                                        src="images/icons/icon_giftbox.png"
+                                        alt="선물함"
+                                    />
+                                    <span>선물함</span>
+                                </div>
+                                <div class="btn btn_payment">
+                                    <img
+                                        src="images/icons/icon_payment.png"
+                                        alt="결제"
+                                    />
+                                    <span>결제</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="explore">
+                            <span>한번 살펴보세요!</span>
+                            <div class="explore_option">
+                                <div class="btn">
+                                    <img
+                                        src="images/icons/icon_registration.png"
+                                        alt="충전권 등록하기"
+                                    />
+                                    <div class="btn_txt">
+                                        <span
+                                            >선물받은 충전권이 있으신가요?</span
+                                        >
+                                        <strong>충전권 등록하기</strong>
+                                    </div>
+                                </div>
+                                <div class="btn">
+                                    <img
+                                        src="images/icons/icon_franchisee.png"
+                                        alt="제로페이 가맹점 찾기"
+                                    />
+                                    <div class="btn_txt">
+                                        <span>가맹점을 찾아보세요!</span>
+                                        <strong>제로페이 가맹점 찾기</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <script>
+            const changeTxt = document.querySelector(".change_txt");
+            const btnSelectCard = document.querySelector(".btn_select_card");
+            const btnChargeCard = document.querySelector(".btn_charge_card");
+            const noneCard = document.querySelector(".none_card");
+            const noneCardContent =
+                document.querySelector(".none_card-content");
+            const cardRegistration =
+                document.querySelector(".card_registration");
+            const cardRegistrationContent = document.querySelector(
+                ".card_registration_content"
+            );
+            const cardNumber = document.querySelector(".card_number");
+            btnSelectCard.addEventListener("click", (e) => {
+                e.currentTarget.style.display = "none";
+                noneCardContent.style.display = "none";
+                noneCard.style.display = "none";
+                cardRegistration.style.display = "flex";
+                btnChargeCard.style.display = "flex";
+                cardRegistrationContent.style.display = "block";
+            });
+
+            btnChargeCard.addEventListener("click", () => {
+                ChargeCard();
+            });
+
+            function ChargeCard(call = false) {
+                if (!call) {
+                    changeTxt.textContent = "카드번호";
+                    cardRegistration.style.display = "none";
+                    cardNumber.style.display = "flex";
+                }
+                ChargeCard = function (call) {
+                    if (!call) {
+                        return ChargeCard(true);
+                    } else if (call) {
+                        return Charge(true);
+                    }
+                };
+            }
+
+            function Charge(status = false) {
+                if (status) {
+                    alert("충전");
+                }
+            }
+        </script>
+    </body>
+</html>

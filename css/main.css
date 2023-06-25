@@ -1,0 +1,296 @@
+.wrap {
+    width: 100%;
+    height: 100%;
+}
+.main_header {
+    width: 100%;
+    height: 171rem;
+    background: url("../images/bg/bg_main.png") no-repeat center bottom / cover;
+    border-radius: 0 0 48rem 48rem;
+    overflow: hidden;
+}
+.main_menu {
+    position: relative;
+    width: 100%;
+    height: 54rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main_menu .logo {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 18rem;
+    cursor: pointer;
+}
+.main_menu .logo img {
+    display: block;
+    width: 79rem;
+    height: 19rem;
+}
+.main_menu .btn_menu {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 18rem;
+    cursor: pointer;
+}
+.main_menu .btn_menu img {
+    display: block;
+    width: 28rem;
+    height: 20rem;
+}
+.main_wrap {
+    width: 100%;
+    height: calc(100% - 60rem);
+    display: flex;
+    flex-direction: column;
+    margin-top: -111rem;
+    padding: 0 18rem;
+}
+.main_content {
+    flex: 1;
+}
+.card {
+    width: 100%;
+    height: 208rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 24rem;
+    border: 1px solid var(--boxBorderColor);
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.66) 17%,
+        #ffffff 52%,
+        #ffffff 100%
+    );
+    backdrop-filter: blur(20rem);
+    box-shadow: 0 5rem 24rem 0 rgba(0, 0, 0, 0.12);
+    padding: 14rem 18rem 24rem;
+}
+.card_wrap {
+    flex: 1;
+}
+.card-top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12rem;
+}
+.card-top span {
+    font-size: 14rem;
+    letter-spacing: -0.22rem;
+    color: var(--colorSubFontBlack);
+    font-weight: 600;
+}
+.card-top .btn_refresh img {
+    display: block;
+    width: 32rem;
+    height: 32rem;
+}
+.none_card,
+.card_registration {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    grid-gap: 10rem;
+}
+.card_txt {
+    font-size: 12rem;
+    color: var(--colorMainFontGray);
+    font-weight: 300;
+}
+.value {
+    font-size: 30rem;
+    color: var(--colorMainFontBlack);
+    font-weight: 800;
+    letter-spacing: -0.8rem;
+}
+.txt {
+    font-size: 22rem;
+    color: var(--colorMainFontBlack);
+    font-weight: 800;
+    letter-spacing: -0.73rem;
+}
+.btn_select_card,
+.btn_charge_card {
+    width: 100%;
+    height: 48rem;
+    border-radius: 24rem;
+    background: var(--gradientColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15rem;
+    color: var(--colorWhite);
+    font-weight: 700;
+}
+.none_card-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 120rem;
+}
+.none_card_txt {
+    display: flex;
+    flex-direction: column;
+    gap: 14rem;
+    grid-gap: 14rem;
+    text-align: center;
+}
+.emoji {
+    font-size: 32rem;
+}
+.hello_user {
+    font-size: 14rem;
+    letter-spacing: -0.22rem;
+    line-height: 1.5;
+    color: var(--colorSubFontBlack);
+    font-weight: 600;
+}
+.hello_user span {
+    color: var(--colorPrimary);
+}
+.mypay {
+    padding: 26rem 0 24rem 0;
+    border-bottom: 1px solid var(--boxUnderLineBorderColor);
+}
+.mypay > span,
+.explore > span {
+    font-size: 16rem;
+    letter-spacing: -0.25rem;
+    color: var(--colorTitleBlack);
+    font-weight: 600;
+}
+.mypay .mypay_option {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 11rem;
+    grid-gap: 11rem;
+    margin-top: 10rem;
+}
+.mypay .mypay_option .btn {
+    flex: 1;
+    height: 104rem;
+    background-color: var(--colorWhite);
+    border: 1px solid var(--boxSubBorderColor);
+    border-radius: 16rem;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    grid-gap: 6rem;
+}
+.mypay .mypay_option .btn img {
+    display: block;
+    width: 62rem;
+    height: 36rem;
+}
+.mypay .mypay_option .btn span {
+    font-size: 14rem;
+    letter-spacing: -0.22rem;
+    color: var(--colorSubFontBlack);
+    font-weight: 600;
+}
+.explore {
+    margin-top: 28rem;
+}
+.explore_option {
+    display: flex;
+    flex-direction: column;
+    gap: 12rem;
+    grid-gap: 12rem;
+    margin-top: 10rem;
+}
+.explore_option .btn {
+    width: 100%;
+    height: 84rem;
+    padding: 17rem 20rem;
+    display: flex;
+    align-items: center;
+    gap: 18rem;
+    grid-gap: 18rem;
+    background-color: var(--colorWhite);
+    border-radius: 16rem;
+    border: 1px solid var(--boxSubBorderColor);
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.06);
+}
+.explore_option .btn img {
+    display: block;
+    width: 50rem;
+    height: 50rem;
+}
+.explore_option .btn .btn_txt {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    grid-gap: 8rem;
+}
+.explore_option .btn .btn_txt span {
+    font-size: 13rem;
+    letter-spacing: -0.09rem;
+    color: var(--colorFontGray);
+    font-weight: 400;
+}
+.explore_option .btn .btn_txt strong {
+    font-size: 16rem;
+    letter-spacing: -0.25rem;
+    color: var(--colorSubFontBlack);
+    font-weight: 700;
+}
+.card_number {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+    grid-gap: 8rem;
+}
+.card_number .cardnumber_input-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    grid-gap: 6rem;
+}
+.card_number .cardnumber_input-box label {
+    font-size: 12px;
+    letter-spacing: -0.29rem;
+    color: var(--colorMainFontGray);
+    font-weight: 400;
+}
+.card_number .cardnumber_input-box input {
+    width: 100%;
+    height: 40rem;
+    border-radius: 4rem;
+    background-color: var(--colorWhite);
+    border: 1px solid var(--inputSubBorderColor);
+    padding: 0 14rem;
+    font-size: 14rem;
+    letter-spacing: -0.22rem;
+    color: var(--colorMainFontBlack);
+    font-weight: 800;
+}
+.card_number .cardnumber_input-box input::placeholder {
+    font-size: 12rem;
+    color: var(--inputPlaceholderColor);
+    font-weight: 400;
+}
+
+.btn_charge_card,
+.card_registration_content,
+.card_registration,
+.card_number {
+    display: none;
+}

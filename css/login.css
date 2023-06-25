@@ -1,0 +1,105 @@
+.wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.login_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login_container h1 {
+    font-size: 32rem;
+    color: var(--colorBlack);
+    font-weight: 800;
+}
+.login_form {
+    width: 100%;
+    margin-top: 32rem;
+    padding: 0 18rem;
+}
+.login_input-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20rem;
+    grid-gap: 20rem;
+    margin-bottom: 16rem;
+}
+.login_input-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+    grid-gap: 7rem;
+}
+.login_input-box label {
+    font-size: 14rem;
+    letter-spacing: -0.22rem;
+    color: var(--colorFontBlack);
+    font-weight: 600;
+}
+.login_input-box input {
+    width: 100%;
+    height: 48rem;
+    background-color: var(--colorWhite);
+    border-radius: 10rem;
+    border: 1px solid var(--inputBorderColor);
+    padding: 0 14px;
+    font-size: 14rem;
+    letter-spacing: -0.22rem;
+    color: var(--inputColor);
+    font-weight: 400;
+}
+.login_input-box input::placeholder {
+    font-weight: 300;
+    color: var(--inputPlaceholderColor);
+}
+.login_form .find {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8rem;
+    grid-gap: 8rem;
+    font-size: 14rem;
+    color: var(--colorFontGray);
+}
+.login_form .find a {
+    font-size: 14rem;
+    letter-spacing: -0.22rem;
+    color: var(--colorFontGray);
+    font-weight: 400;
+    text-decoration: none;
+}
+.login_btns {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20rem;
+    grid-gap: 20rem;
+    margin-top: 42rem;
+}
+.login_btns .btn {
+    width: 100%;
+    height: 56rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16rem;
+    letter-spacing: -0.25rem;
+    font-weight: 600;
+}
+.btn_login {
+    background: var(--gradientColor);
+    border-radius: 12rem;
+    color: var(--colorWhite);
+}
+.btn_register {
+    background: var(--colorWhite);
+    border-radius: 28rem;
+    border: 1px solid var(--colorPrimary);
+    color: var(--colorPrimary);
+}

@@ -1,0 +1,31 @@
+:root {
+    --backGroundColor: #fdfdfd;
+    --gradientColor: linear-gradient(90deg, #3182f6 0%, #5969fe 100%);
+    --boxBorderColor: #f5f5f5;
+    --boxSubBorderColor: #f3f3f3;
+    --boxUnderLineBorderColor: #efefef;
+
+    --colorBlack: #000000;
+    --colorWhite: #ffffff;
+    --colorPrimary: #3182f6;
+
+    --colorFontBlack: #292929;
+    --colorMainFontBlack: #252525;
+    --colorSubFontBlack: #353535;
+    --colorFontGray: #999999;
+    --colorMainFontGray: #666666;
+    --colorTitleBlack: #282828;
+
+    --inputBorderColor: #dedee1;
+    --inputSubBorderColor: #e6e6e6;
+    --inputPlaceholderColor: #b1b3b3;
+    --inputColor: #252525;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    background-color: var(--backGroundColor);
+}
