@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/common.css" />
+        <link rel="stylesheet" href="css/registration.css" />
+        <title>My Pay</title>
+    </head>
+    <body>
+        <div class="wrap">
+            <header class="subpage_header">
+                <div class="header_container">
+                    <div class="btn_prev">
+                        <img src="images/btns/btn_prev.png" alt="뒤로가기" />
+                    </div>
+                    <h1>충전권 등록하기</h1>
+                </div>
+            </header>
+            <main class="subpage_main">
+                <strong>
+                    충전권 <span>일렬번호 12자리</span>와<br />
+                    <span>코드키 16자리</span>를 입력해주세요.
+                </strong>
+                <div class="registration">
+                    <div class="number">
+                        <label>일련번호</label>
+                        <div class="inputbox">
+                            <input type="text" placeholder="3자리" />
+                            <input type="text" placeholder="3자리" />
+                            <input type="text" placeholder="3자리" />
+                        </div>
+                    </div>
+                    <div class="codekey-wrap">
+                        <div class="codekey">
+                            <label>코드키</label>
+                            <input
+                                type="password"
+                                placeholder="비밀번호를 입력해주세요"
+                            />
+                        </div>
+                        <span>영문 대소문자 구분하여 입력해주세요.</span>
+                    </div>
+                </div>
+            </main>
+            <div class="registration_btn-wrap">
+                <span>충전권은 선물함에서 확인하실 수 있습니다.</span>
+                <button>등록하기</button>
+            </div>
+        </div>
+        <script src="js/common.js"></script>
+    </body>
+</html>

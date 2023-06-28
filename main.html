@@ -102,7 +102,7 @@
                         <div class="explore">
                             <span>한번 살펴보세요!</span>
                             <div class="explore_option">
-                                <div class="btn">
+                                <div class="btn registration_move">
                                     <img
                                         src="images/icons/icon_registration.png"
                                         alt="충전권 등록하기"
@@ -130,7 +130,142 @@
                 </div>
             </main>
         </div>
-
+        <div class="menu">
+            <div class="menu_content">
+                <div class="btn_close">
+                    <img src="images/btns/btn_close.png" alt="닫기" />
+                </div>
+                <div class="user_profile">
+                    <strong>
+                        한상혁님<br />
+                        반갑습니다!
+                    </strong>
+                    <div class="btn_mypage">
+                        MY
+                        <img src="images/btns/btn_more.png" alt="이동" />
+                    </div>
+                </div>
+                <div class="menu_list-wrap">
+                    <div class="menu_list">
+                        <span>거래내역</span>
+                        <ul>
+                            <li>
+                                <a href="#"
+                                    >충전내역
+                                    <img
+                                        src="images/icons/icon_more.png"
+                                        alt="더보기"
+                                    />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    >사용내역
+                                    <img
+                                        src="images/icons/icon_more.png"
+                                        alt="더보기"
+                                    />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    >이체결과 조회
+                                    <img
+                                        src="images/icons/icon_more.png"
+                                        alt="더보기"
+                                    />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu_list">
+                        <span>카드설정</span>
+                        <ul>
+                            <li>
+                                <a href="#"
+                                    >카드 비밀번호 변경
+                                    <img
+                                        src="images/icons/icon_more.png"
+                                        alt="더보기"
+                                    />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    >결제 비밀번호 변경
+                                    <img
+                                        src="images/icons/icon_more.png"
+                                        alt="더보기"
+                                    />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    >SMS 알림설정
+                                    <img
+                                        src="images/icons/icon_more.png"
+                                        alt="더보기"
+                                    />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu_list">
+                        <span>개인/보안</span>
+                        <ul>
+                            <li>
+                                <a href="#"
+                                    >개인정보 변경
+                                    <img
+                                        src="images/icons/icon_more.png"
+                                        alt="더보기"
+                                    />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    >휴대폰번호 변경
+                                    <img
+                                        src="images/icons/icon_more.png"
+                                        alt="더보기"
+                                    />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    >로그인 비밀번호 변경
+                                    <img
+                                        src="images/icons/icon_more.png"
+                                        alt="더보기"
+                                    />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    >약관보기
+                                    <img
+                                        src="images/icons/icon_more.png"
+                                        alt="더보기"
+                                    />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    >회원탈퇴
+                                    <img
+                                        src="images/icons/icon_more.png"
+                                        alt="더보기"
+                                    />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="logout_btn-wrap">
+                    <button>로그아웃</button>
+                </div>
+            </div>
+        </div>
         <script>
             const changeTxt = document.querySelector(".change_txt");
             const btnSelectCard = document.querySelector(".btn_select_card");
@@ -174,9 +309,37 @@
 
             function Charge(status = false) {
                 if (status) {
-                    alert("충전");
+                    alert("충전완료!!");
                 }
             }
+        </script>
+        <script>
+            const btnMenu = document.querySelector(".btn_menu");
+            const menu = document.querySelector(".menu");
+            const btnClose = document.querySelector(".btn_close");
+
+            btnMenu.addEventListener("click", () => {
+                menu.classList.add("active");
+            });
+            btnClose.addEventListener("click", () => {
+                menu.classList.remove("active");
+            });
+        </script>
+        <script>
+            const btnGift = document.querySelector(".btn_gift");
+            const btnGiftBox = document.querySelector(".btn_giftbox");
+            const registrationMove =
+                document.querySelector(".registration_move");
+
+            btnGift.addEventListener("click", () => {
+                location.href = "gift.html";
+            });
+            btnGiftBox.addEventListener("click", () => {
+                location.href = "giftbox.html";
+            });
+            registrationMove.addEventListener("click", () => {
+                location.href = "registration.html";
+            });
         </script>
     </body>
 </html>
