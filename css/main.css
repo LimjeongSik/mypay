@@ -107,18 +107,6 @@
     color: var(--colorMainFontGray);
     font-weight: 300;
 }
-.value {
-    font-size: 30rem;
-    color: var(--colorMainFontBlack);
-    font-weight: 800;
-    letter-spacing: -0.8rem;
-}
-.txt {
-    font-size: 22rem;
-    color: var(--colorMainFontBlack);
-    font-weight: 800;
-    letter-spacing: -0.73rem;
-}
 .btn_select_card,
 .btn_charge_card {
     width: 100%;
