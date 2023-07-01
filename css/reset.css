@@ -139,3 +139,6 @@ input {
 input::placeholder {
     font-family: "suite", sans-serif;
 }
+button {
+    font-family: "suite";
+}
