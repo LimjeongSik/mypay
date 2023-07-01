@@ -136,6 +136,9 @@ table {
 input {
     outline: none;
 }
+input[type="date"] {
+    font-family: "suite", sans-serif;
+}
 input::placeholder {
     font-family: "suite", sans-serif;
 }

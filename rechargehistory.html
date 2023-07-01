@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/common.css" />
+        <link rel="stylesheet" href="css/rechargehistory.css" />
+        <title>My Pay</title>
+    </head>
+    <body>
+        <div class="wrap">
+            <header class="subpage_header">
+                <div class="header_container">
+                    <div class="btn_prev">
+                        <img src="images/btns/btn_prev.png" alt="뒤로가기" />
+                    </div>
+                    <h1>충전내역</h1>
+                </div>
+            </header>
+            <main class="subpage_main">
+                <div class="rechargehistory">
+                    <div class="charge_method select">
+                        <span>충전방법</span>
+                        <div class="dropdown">
+                            <div class="btn_drop">
+                                <span class="selectcontent"
+                                    >충전방법을 선택해주세요.</span
+                                >
+                                <img
+                                    src="images/btns/btn_drop_down.png"
+                                    alt=""
+                                />
+                            </div>
+                            <ul class="dropdown-content">
+                                <li>총 대기금액</li>
+                                <li>카드</li>
+                                <li>계좌이체</li>
+                                <li>휴대폰</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="date select">
+                        <span>날짜조회</span>
+                        <div class="date-con">
+                            <input type="date" data-placeholder="" required />
+                            <button>조회</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="date_list">
+                    <span>2023.06.12</span>
+                    <ul>
+                        <li>
+                            <div>
+                                <strong>충전권</strong>
+                                <span>2023/06/12 14:12</span>
+                            </div>
+                            <span>8,500원</span>
+                        </li>
+                        <li>
+                            <div>
+                                <strong>충전권</strong>
+                                <span>2023/06/12 14:12</span>
+                            </div>
+                            <span>8,500원</span>
+                        </li>
+                        <li>
+                            <div>
+                                <strong>충전권</strong>
+                                <span>2023/06/12 14:12</span>
+                            </div>
+                            <span>8,500원</span>
+                        </li>
+                    </ul>
+                </div>
+            </main>
+        </div>
+        <script src="js/common.js"></script>
+        <script>
+            const btnDrop = document.querySelector(".btn_drop");
+            const dropdownContent = document.querySelector(".dropdown-content");
+            const selectContent = document.querySelector(".selectcontent");
+            const dropdownList = document.querySelectorAll(
+                ".dropdown-content li"
+            );
+
+            window.addEventListener("click", (e) => {
+                if (!e.target.matches(".btn_drop")) {
+                    dropdownContent.classList.remove("active");
+                }
+            });
+
+            btnDrop.addEventListener("click", (e) => {
+                e.stopPropagation();
+                dropdownContent.classList.toggle("active");
+            });
+
+            dropdownList.forEach((list) => {
+                list.addEventListener("click", (e) => {
+                    selectContent.textContent = list.textContent;
+                    dropdownContent.classList.remove("active");
+                });
+            });
+        </script>
+    </body>
+</html>
