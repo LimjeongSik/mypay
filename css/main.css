@@ -53,10 +53,11 @@
 }
 .main_content {
     flex: 1;
+    padding-bottom: 50rem;
 }
 .card {
     width: 100%;
-    height: 208rem;
+    min-height: 208rem;
     display: flex;
     flex-direction: column;
     border-radius: 24rem;
@@ -119,6 +120,7 @@
     font-size: 15rem;
     color: var(--colorWhite);
     font-weight: 700;
+    cursor: pointer;
 }
 .none_card-content {
     width: 100%;
@@ -180,6 +182,7 @@
     justify-content: center;
     gap: 6rem;
     grid-gap: 6rem;
+    cursor: pointer;
 }
 .mypay .mypay_option .btn img {
     display: block;
@@ -214,6 +217,7 @@
     border-radius: 16rem;
     border: 1px solid var(--boxSubBorderColor);
     box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.06);
+    cursor: pointer;
 }
 .explore_option .btn img {
     display: block;
