@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/common.css" />
+        <link rel="stylesheet" href="css/alarmset.css" />
+        <title>My Pay</title>
+    </head>
+    <body>
+        <div class="wrap">
+            <header class="subpage_header">
+                <div class="header_container">
+                    <div class="btn_prev">
+                        <img src="images/btns/btn_prev.png" alt="뒤로가기" />
+                    </div>
+                    <h1>SMS 알림설정</h1>
+                </div>
+            </header>
+            <main class="subpage_main">
+                <div class="title">
+                    <strong>
+                        SMS알림을 설정하시면 <span>카드 이용내역</span>을<br />
+                        문자로 받아보실 수 있습니다.
+                    </strong>
+                    <span>*월 1,100원 / 50건 (초과 시 1건당 20원)</span>
+                </div>
+                <div class="alarmset">
+                    <div class="alarmset_box">
+                        <span>휴대폰번호</span>
+                        <input type="text" value="010 **** 9231" />
+                    </div>
+                    <div class="alarmset_box-toggle">
+                        <strong>알림설정</strong>
+                        <label>
+                            <input role="switch" type="checkbox" />
+                        </label>
+                    </div>
+                </div>
+            </main>
+            <div class="alarmset_btn">
+                <a href="#">이용안내 보기</a>
+                <button>저장</button>
+            </div>
+        </div>
+        <script src="js/common.js"></script>
+    </body>
+</html>
